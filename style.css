@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+  background: linear-gradient(rgba(15, 15, 30, 0.7), rgba(25, 25, 40, 0.7)),
+              url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Loading screen */
+.loading-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(15, 15, 30, 0.7), rgba(25, 25, 40, 0.7)),
+              url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.logo-loading {
+  width: 150px;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.loading-screen h1 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.loading-bar {
+  width: 80%;
+  height: 6px;
+  background: #222;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-bar::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, #00ffff, #00ccff);
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% { left: -50%; }
+  50% { left: 100%; }
+  100% { left: -50%; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.main-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+  height: 50px;
+  border-radius: 12px;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-bar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-bar a:hover {
+  color: #00dddd;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease;
+  opacity: 0.85;
+}
+
+.card:hover {
+  transform: scale(1.01);
+}
+
+.card h3 {
+  color: #00eaff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pay-logo {
+  height: 24px;
+}
+
+.card p.number {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.an {
+  display: block;
+  margin: 5px 0 10px;
+  color: #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #00ffff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00dddd;
+}
+
+.qris-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
+.qris-img {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid #00ffff88;
+}
+
+.info {
+  background: rgba(50, 50, 50, 0.6);
+  padding: 15px;
+  font-size: 0.9rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none;
+  }
